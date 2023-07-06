@@ -10,7 +10,7 @@ body {
 }
 
 .hero {
-    background-color: #e67fdd;
+    background-color: #bd39b2;
     color: #fff;
     padding: 50px 30px;
     text-align: center;
@@ -39,7 +39,7 @@ body {
 
 .hero h1 {
     font-weight: normal;
-    font-size: 6rem;
+    font-size: 3rem;
     margin: 0;
 }
 
@@ -59,9 +59,26 @@ body {
     text-decoration: none;
     padding: 10px;
     color: #e67fdd;
-    border: 1px solid #f4d3f1;
+    border: 1px solid #f8a3f1;
     border-radius: 25px;
     margin: 4px;
+}
+
+.filter-nav .active {
+    background-color: #e67fdd;
+    color: white;
+    border-color: #fc79d5;
+}
+
+.filter-nav a:hover {
+    background-color: #fce2fc;
+}
+
+.filter-nav .active:hover {
+    background-color: #e67fdd;
+    color: white;
+    border-color: #fc79d5;
+    cursor: default;
 }
 
 .animals {
@@ -71,7 +88,8 @@ body {
 
 .animal-card {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    margin: 20px;
+    grid-template-columns: 100%;
     background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
@@ -80,7 +98,7 @@ body {
 .animal-card-photo {
     order: 1;
     grid-row: 1;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 .animal-card-photo img {
@@ -88,11 +106,11 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform .3s ease-in-out;
+    transition: transform;
 }
 
 .animal-card-photo:hover {
-    transform: rotate(15deg) scale(1.1);
+    transform: scale(1.1);
 }
 
 .animal-card-text {
@@ -127,4 +145,14 @@ body {
 
 .primary-btn:hover {
     background: linear-gradient(#ea83dd, #e7099d);
+}
+
+@media screen and (min-width: 768px) {
+    .animal-card {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .hero h1 {
+        font-size: 6rem;
+    }
 }

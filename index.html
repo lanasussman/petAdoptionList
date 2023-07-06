@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Adoption List</title>
+    <link rel="icon" href="favicon.jpg">
     <link rel="stylesheet" href="styles.css">
     <script type="module" src="main.js"></script>
 </head>
+
 <body>
-<div class="hero">
-    <h1>Welcome</h1>
-    <h2>Our friends need a home</h2>
-</div>
-<div class="filter-nav">
-    <a href="#">All animals</a>
-    <a href="#">Dogs</a>
-    <a href="#">Cats</a>
-    <a href="#">Rabbits</a>
-</div>
-<div class="animals">
-    <div class="animal-card">
-        <div class="animal-card-text">
-            <h3>Cookie</h3>
-            <small><span class="age"> 2 y.o.</span> - <span class="species">Cat</span></small>
-            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, nobis atque hic voluptatum.</p>
-            <a href="#" class="primary-btn">Adopt</a>
-        </div>
-        <div class="animal-card-photo">
-            <img src="https://learnwebcode.github.io/pet-adoption-data/photos/meowsalot.webp" alt="Red cat">
-        </div>
+    <div class="hero">
+        <h1>Welcome</h1>
+        <h2>Our friends need a home</h2>
     </div>
-</div>
+    <div class="filter-nav">
+        <a href="#" data-filter="allAnimals">All animals</a>
+        <a href="#" data-filter="dog">Dogs</a>
+        <a href="#" data-filter="cat">Cats</a>
+        <a href="#" data-filter="rabbit">Rabbits</a>
+    </div>
+    <div class="animals">
+    </div>
+    <template id="animal-card">
+        <div class="animal-card">
+            <div class="animal-card-text">
+                <h3></h3>
+                <small><span class="age"> 2 y.o.</span> - <span class="species">Cat</span></small>
+                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, nobis atque hic
+                    voluptatum.</p>
+                <a href="#" class="primary-btn">Adopt</a>
+            </div>
+            <div class="animal-card-photo">
+                <img src="https://learnwebcode.github.io/pet-adoption-data/photos/meowsalot.webp" alt="Red cat">
+            </div>
+        </div>
+    </template>
 </body>
+
 </html>
